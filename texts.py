@@ -1,3 +1,5 @@
+# add new texts as list items
+
 texts = [
     "Self-confidence is a state of mind where someone pushes their boundaries and encourages belief from the very\n"
     "beginning, and this comes from a place of self-love. You ought to love yourself to gain that freedom from\n"

@@ -5,11 +5,11 @@ from texts import texts
 
 
 def start():
-    text = random.choice(texts)
-    typed_text.config(state="normal")
-    typed_text.delete('1.0', "end-1c")
-    typed_text.focus()
-    text_label.config(text=text)
+    text = random.choice(texts)  # choose one random item (text) from the list
+    typed_text.config(state="normal")  # now you can type
+    typed_text.delete('1.0', "end-1c")  # clear the Text widget
+    typed_text.focus()  # put the cursor in the Text widget
+    text_label.config(text=text)  # show the text to type from
     count_down(60)
 
 
@@ -19,8 +19,8 @@ def count_down(count):
     words_label.config(text=f"Words count: {words_count} words")
     if count > 0:
         window.after(1000, count_down, count - 1)
-    else:
-        typed_text.config(state="disabled")
+    else:  # when the timer reaches 0
+        typed_text.config(state="disabled")  # can't type
         messagebox.showinfo(title="Time over", message=f"You typed {words_count} words in 60 seconds!")
 
 
@@ -39,7 +39,7 @@ timer_label = tk.Label(text="60 s")
 timer_label.pack()
 
 typed_text = tk.Text(height=12)
-typed_text.config(state="disabled")
+typed_text.config(state="disabled")  # can't type before the counter starts
 typed_text.pack()
 
 words_label = tk.Label(text="Typed words: 0")
