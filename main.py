@@ -5,6 +5,7 @@ from texts import texts
 
 
 def start():
+    text = random.choice(texts)
     typed_text.config(state="normal")
     typed_text.delete('1.0', "end-1c")
     typed_text.focus()
@@ -23,14 +24,12 @@ def count_down(count):
         messagebox.showinfo(title="Time over", message=f"You typed {words_count} words in 60 seconds!")
 
 
-text = random.choice(texts)
-
 window = tk.Tk()
 window.title("Typing Speed Test")
 window.minsize(width=600, height=0)
 window.config(pady=30, padx=45)
 
-text_label = tk.Label(text="Text", height=9)
+text_label = tk.Label(height=9)
 text_label.pack()
 
 start_button = tk.Button(text="Start", command=start)
