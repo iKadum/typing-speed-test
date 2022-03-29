@@ -9,7 +9,7 @@ def start():
     typed_text.delete('1.0', "end-1c")
     typed_text.focus()
     text_label.config(text=text)
-    count_down(10)
+    count_down(60)
 
 
 def count_down(count):
