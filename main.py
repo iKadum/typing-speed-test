@@ -12,7 +12,7 @@ def start():
     text_label.config(text=text)  # show the text to type from
     start_button.config(state="disabled")
     reset_button.config(state="normal")
-    count_down(6)
+    count_down(60)
 
 
 def reset():
@@ -24,6 +24,7 @@ def reset():
     text_label.config(text="")
     words_label.config(text="Typed words: 0")
     start_button.config(state="normal")
+    reset_button.config(state="disabled")
 
 
 def count_down(count):
